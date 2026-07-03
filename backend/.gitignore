@@ -1,6 +1,6 @@
 # =========================
 
-# Python
+# Python cache / compiled files
 
 # =========================
 
@@ -12,7 +12,7 @@
 
 # =========================
 
-# Virtual Environment
+# Virtual environments
 
 # =========================
 
@@ -23,7 +23,7 @@ ENV/
 
 # =========================
 
-# Environment / Secrets
+# Environment files / secrets
 
 # =========================
 
@@ -58,11 +58,10 @@ Thumbs.db
 
 *.log
 logs/
-uvicorn.log
 
 # =========================
 
-# Testing / Coverage
+# Test / coverage / lint cache
 
 # =========================
 
@@ -70,23 +69,16 @@ uvicorn.log
 .coverage
 .coverage.*
 htmlcov/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
 .tox/
 .nox/
 
 # =========================
 
-# Type checker / lint caches
-
-# =========================
-
-.mypy_cache/
-.ruff_cache/
-.pyre/
-.pytype/
-
-# =========================
-
-# Build / Packaging
+# Build / packaging
 
 # =========================
 
@@ -105,7 +97,7 @@ dist/
 
 # =========================
 
-# Local database / sqlite (if ever used)
+# Local DB files if ever used
 
 # =========================
 
@@ -114,7 +106,7 @@ dist/
 
 # =========================
 
-# Uploaded resumes / generated files
+# Uploads / generated files
 
 # =========================
 
@@ -126,7 +118,7 @@ exports/
 
 # =========================
 
-# AI / model artifacts / embeddings cache
+# AI / embedding cache artifacts
 
 # =========================
 
@@ -144,13 +136,5 @@ embeddings_cache/
 
 # =========================
 
-alembic/versions/**pycache**/
-
-# =========================
-
-# Node / frontend (only if frontend is inside same repo)
-
-# =========================
-
-node_modules/
-dist-frontend/
+migrations/**pycache**/
+migrations/versions/**pycache**/
