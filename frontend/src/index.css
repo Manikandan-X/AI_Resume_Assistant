@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #12131A;
+  --color-ink-soft: #1D2029;
+  --color-paper: #FCFCFA;
+  --color-paper-dim: #F1F0EC;
+  --color-indigo: #4F46E5;
+  --color-indigo-dark: #3730A3;
+  --color-signal: #16A34A;
+  --color-slate: #64748B;
+  --color-line: #E2E4E9;
+
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-paper-dim);
+  color: var(--color-ink);
+}
+
+.scan-line {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-indigo), transparent);
+  animation: scan 3s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes scan {
+  0% { top: 10%; opacity: 0; }
+  10% { opacity: 0.8; }
+  50% { top: 85%; opacity: 0.8; }
+  60% { opacity: 0; }
+  100% { top: 10%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-line { animation: none; opacity: 0; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
