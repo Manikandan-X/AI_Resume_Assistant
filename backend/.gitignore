@@ -1,0 +1,156 @@
+# =========================
+
+# Python
+
+# =========================
+
+**pycache**/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# =========================
+
+# Virtual Environment
+
+# =========================
+
+venv/
+.venv/
+env/
+ENV/
+
+# =========================
+
+# Environment / Secrets
+
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+
+# IDE / Editor
+
+# =========================
+
+.vscode/
+.idea/
+*.iml
+
+# =========================
+
+# OS files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# Logs
+
+# =========================
+
+*.log
+logs/
+uvicorn.log
+
+# =========================
+
+# Testing / Coverage
+
+# =========================
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+
+# Type checker / lint caches
+
+# =========================
+
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# =========================
+
+# Build / Packaging
+
+# =========================
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+
+# Jupyter
+
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+
+# Local database / sqlite (if ever used)
+
+# =========================
+
+*.db
+*.sqlite3
+
+# =========================
+
+# Uploaded resumes / generated files
+
+# =========================
+
+uploads/
+temp/
+tmp/
+generated/
+exports/
+
+# =========================
+
+# AI / model artifacts / embeddings cache
+
+# =========================
+
+*.pkl
+*.joblib
+*.bin
+*.npy
+*.npz
+vector_store/
+embeddings_cache/
+
+# =========================
+
+# Alembic cache
+
+# =========================
+
+alembic/versions/**pycache**/
+
+# =========================
+
+# Node / frontend (only if frontend is inside same repo)
+
+# =========================
+
+node_modules/
+dist-frontend/
